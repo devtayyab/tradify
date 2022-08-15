@@ -1,0 +1,125 @@
+@import ./helpers
+
+.table
+    display: table
+    width: 100%
+    +t
+        display: block
+
+.row
+    display: table-row
+    color: $n2
+    +t
+        position: relative
+        display: block
+
+    &:hover
+          background: $n7
+          +dark
+              background: $n2
+   
+    &:not(:first-child)
+       
+        transition: background .2s
+        .col
+            vertical-align: middle
+            font-weight: 500
+            &:first-child
+                border-radius: 12px 0 0 12px
+                color: $n4
+                +t
+                    border-radius: 0
+            &:last-child
+                border-radius: 0 12px 12px 0
+                +t
+                    border-radius: 0
+        
+           
+    &:not(:last-child)
+        +t
+            margin-bottom: 24px
+            padding-bottom: 20px
+            border-bottom: 1px solid $n6
+            +dark
+                border-color: $n3
+
+.col
+    display: table-cell
+    padding: 16px
+    text-align: right
+    font-weight: 500
+  
+    +dark
+        color: $n8
+    &:first-child,
+    &:nth-child(2)
+        text-align: left
+    &:nth-child(2)
+        +t
+            margin-bottom: 16px
+    &:nth-last-child(2)
+       
+    &:first-child
+        font-size: 12px
+       
+    &:last-child
+        +t
+            margin-bottom: 0
+
+.line
+    display: inline-flex
+    align-items: center
+    +caption-bold-2
+
+.favorite
+    position: relative
+    top: -1px
+    margin-right: 10px
+
+.item
+    display: flex
+    align-items: center
+
+.icon
+    flex-shrink: 0
+    width: 32px
+    margin-right: 12px
+    img
+        max-width: 100%
+
+.subtitle
+    margin-right: 4px
+
+.currency
+    font-weight: 400
+    color: $n4
+
+.positive
+    color: $p4
+
+.negative
+    color: $p3
+
+.button
+    display: none
+    width: 96px
+    +d
+        display: inline-flex
+    +t
+        position: absolute
+        top: -6px
+        right: 0
+
+.chart
+    display: inline-block
+    width: 96px
+    height: 40px
+    +d
+
+.label
+ 
+    +t
+        display: block
+        margin-right: auto
+        +caption-bold-2
+        color: $n4

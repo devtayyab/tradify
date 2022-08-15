@@ -1,0 +1,2 @@
+export const TRAINING_MODAL = 'TRAINING_MODAL';
+export const QUIZ_ENTRY_MODAL = 'QUIZ_ENTRY_MODAL';

@@ -1,0 +1,104 @@
+{
+  "name": "traidify",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@kurkle/color": "^0.1.9",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "@mui/material": "^5.0.3",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "chart.js": "^3.5.1",
+    "chartjs-adapter-luxon": "^1.1.0",
+    "classnames": "^2.3.1",
+    "clsx": "^1.1.1",
+    "d3": "^7.0.3",
+    "d3-array": "^3.0.4",
+    "d3-format": "^3.0.1",
+    "d3-scale": "^4.0.1",
+    "echarts": "^5.3.3",
+    "echarts-for-react": "^3.0.2",
+    "eslint-config-react-app": "^6.0.0",
+    "highcharts": "^9.3.2",
+    "highcharts-react-official": "^3.1.0",
+    "history": "^4.10.1",
+    "histoslider": "^2.0.16",
+    "immutable": "^4.0.0-rc.14",
+    "loadash": "^1.0.0",
+    "luxon": "^2.0.2",
+    "mapbox-gl": "^2.4.1",
+    "moment": "^2.29.1",
+    "qs": "^6.10.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.5",
+    "react-d3-cloud": "^1.0.3",
+    "react-d3-library": "^1.1.8",
+    "react-dom": "^17.0.2",
+    "react-outside-click-handler": "^1.3.0",
+    "react-rating": "^2.0.5",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "4.0.3",
+    "react-tradingview-widget": "^1.3.2",
+    "react-wordcloud": "^1.2.7",
+    "recharts": "^2.1.5",
+    "redux": "^4.1.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-persist-transform-immutable": "^5.0.0",
+    "redux-saga": "^1.1.3",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "sass": "^1.43.4",
+    "typeface-roboto": "^1.1.13",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:staging": "rm -rf build && rm -rf /var/www/html/* && react-scripts build && mv build/* /var/www/html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-react": "^7.25.3",
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "2.4.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}

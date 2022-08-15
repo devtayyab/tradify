@@ -1,0 +1,29 @@
+.splash-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 10000;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    138.19deg,
+    rgb(65, 231, 176) 2.08%,
+    rgb(34, 151, 243) 50.52%,
+    rgb(131, 88, 252) 94.79%
+  );
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 700ms;
+}
+
+.splash-container-hidden {
+  opacity: 0;
+  visibility: hidden;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  transition: visibility 0s linear 700ms, opacity 700ms;
+}
