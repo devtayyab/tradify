@@ -576,10 +576,10 @@ export default function MarketInternals() {
                                 theme={theme}
                             />
                             <div>
-                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                                {reds.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
                             </div>
                             <div>
-                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                                {greens.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
                             </div>
                             <ReactECharts
                                 option={Breadthoption}
@@ -588,7 +588,7 @@ export default function MarketInternals() {
                                 theme={theme}
                             />
                             <div>
-                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                                {reds.map((data, index) => <p className={classes.index}>{parseInt(data).toFixed(1) + '/' + greens[index]}</p>)}
                             </div>
                         </div>
                     </Card>
