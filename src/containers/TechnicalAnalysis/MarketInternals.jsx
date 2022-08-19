@@ -30,7 +30,7 @@ export default function MarketInternals() {
     const classes = useStyles();
 
     const formatter = (value, type) => {
-        if (type === 'red') {
+        if (type === 'red' && value) {
             return value.map((item, index) => {
                 return Math.abs(item?.attributes[type]) * -1
             })
@@ -552,38 +552,47 @@ export default function MarketInternals() {
             ></TabGroups>
             <div>
                 <Box pt='1rem' display='flex' flexDirection='row' justifyContent='space-between'>
-                    <Card style={{ width: '45%', height: '100%' }}>
+                    <Card style={{ width: '65%', height: '100%' }}>
                         <p className={classes.paragraph}>Performance</p>
                         <div className={classes.performance}>
 
                             <ReactECharts
                                 option={Perfromanceoption}
-                                style={{ height: "250px", width: "90%", marginBottom: "1rem" }}
+                                style={{ height: "400px", width: "90%", marginBottom: "1rem" }}
                                 className={className}
                                 theme={theme}
                                 onEvents={onEvents}
                             />
                             <div>
-                                {values.map((data, index) => <p className={classes.index} color={data > 0 ? 'black' : 'red'}>{data}</p>)}
+                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseFloat(data)}</p>)}
                             </div>
                         </div>
                         <p className={classes.paragraph}>Market Breadth</p>
                         <div className={classes.market}>
                             <ReactECharts
                                 option={Breadthoption1}
-                                style={{ height: "250px", width: "80%" }}
+                                style={{ height: "400px", width: "40%" }}
                                 className={className}
                                 theme={theme}
                             />
+                            <div>
+                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                            </div>
+                            <div>
+                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                            </div>
                             <ReactECharts
                                 option={Breadthoption}
-                                style={{ height: "250px", width: "80%", }}
+                                style={{ height: "400px", width: "40%", }}
                                 className={className}
                                 theme={theme}
                             />
+                            <div>
+                                {performances.map((data, index) => <p className={classes.index} style={{ color: data > 0 ? 'black' : 'red' }} >{parseInt(data).toFixed(1)}</p>)}
+                            </div>
                         </div>
                     </Card>
-                    <Card style={{ width: '45%', height: '100%' }}>
+                    <Card style={{ width: '30%', height: '100%' }}>
                         <p className={classes.paragraph}>{cummtype} Communication</p>
                         <ReactECharts
                             option={xLsCummonictaionoption}

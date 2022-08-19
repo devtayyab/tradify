@@ -37,8 +37,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
   },
   index: {
-    fontSize: '11px',
+    fontSize: '12px',
     lineHeight: '0.7',
+    marginLeft: '-7% !important',
   },
 }));
 
